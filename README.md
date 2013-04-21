@@ -43,8 +43,7 @@ Installation
 Configuration
 =============
 
-All configuration settings can be found under admin/config/development/rollbar
-once the module is enabled.
+All configuration settings can be found under `admin/config/development/rollbar` once the module is enabled.
 
 
 

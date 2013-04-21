@@ -35,13 +35,9 @@ Installation
 ============
 
 1. Clone this repository. `git clone git@github.com:thepearson/drupal_rollbar.git`
-
 2. Copy the rollbar directory to the modules folder in your installation.
-
 3. Enable the module using Administer -> Modules (`admin/modules`)
-
-4. Download rollbar.php from https://github.com/rollbar/rollbar-php and place it
-   in `sites/all/libraries/rollbar/rollbar.php`
+4. Download rollbar.php from https://github.com/rollbar/rollbar-php and place it in `sites/all/libraries/rollbar/rollbar.php`
 
 
 Configuration

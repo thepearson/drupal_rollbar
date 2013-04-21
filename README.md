@@ -43,6 +43,6 @@ All configuration settings can be found under `admin/config/development/rollbar`
 License
 =======
 
-The code in this module for the most part is GPL'ed however I am unsure about the licensing of the JavaScript snippet which is included and the official Rollbar library that is required to make the PHP support run. If any of the folks at Rollbar can let me know about the licensing.
+The code in this module for the most part should be licensed under the GPLv2 however I am unsure about the licensing of the JavaScript snippet which is included and the official Rollbar library that is required to make the PHP support run. If any of the folks at Rollbar can let me know about the licensing. Untill I clear that up all Rollbar code and libraries are property of them.
 
 

@@ -129,7 +129,7 @@ function rollbar_admin_settings_form($form, &$form_state) {
   $form['js']['rollbar_js_access_token'] = array(
     '#type' => 'textfield',
     '#title' => t('Access token'),
-    '#description' => t('This is the token labeled post_server_item.'),
+    '#description' => t('This is the token labeled post_client_item.'),
     '#default_value' => variable_get('rollbar_js_access_token', NULL),
     '#states' => array(
       'disabled' => array(

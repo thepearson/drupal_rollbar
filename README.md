@@ -12,7 +12,7 @@ Sign up for an account at https://rollbar.com/
 Features
 ========
 
-This module currently supports
+This module currently only supports Drupal 7, with the following features. Over the next few weeks, I will be making some changes and hopefully getting this module listed on Drupal.org.
 
 * Configurable PHP library path.
 * Configurable access keys.

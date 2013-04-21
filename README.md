@@ -25,11 +25,11 @@ This module currently supports
 * Configurable environment (production, staging development etc)
 * PHP Exception handler.
 * PHP Error handler.
-* Watchdog error handler
-* Ignore PHP watchdog errors. (Don't send these to Rollbar)
+* Drupal Watchdog error handler
+* Ignore Drupal watchdog PHP errors. (Don't send these to Rollbar)
 * Ability to turn off native PHP handlers and send all watchdog errors
 * JavaScript integration (send JS errors/exceptions to Rollbar.com)
-
+* PHP/JavaScript integration are seperate use them both or one or the other.
 
 Installation
 ============

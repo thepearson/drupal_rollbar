@@ -29,7 +29,7 @@ This module currently supports
 * Ignore Drupal watchdog PHP errors. (Don't send these to Rollbar).
 * Ability to turn off native PHP handlers and send all watchdog errors.
 * JavaScript integration (send JS errors/exceptions to Rollbar.com).
-* PHP/JavaScript integration are seperate use them both or just one.
+* PHP/JavaScript integration are seperate use them both or only one of them.
 
 Installation
 ============

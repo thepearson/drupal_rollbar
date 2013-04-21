@@ -1,0 +1,5 @@
+name = "Rollbar"
+description = "Provides integration into Rollbar error logging service."
+core = 7.x
+version = 7.x-1.0
+package = Services

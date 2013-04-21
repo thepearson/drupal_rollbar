@@ -15,6 +15,22 @@ that I can't varify is licensed under the GPL.
 Sign up for an account at https://rollbar.com/docs/items_js/
 
 
+Features
+========
+
+This module currently supports
+
+* Configurable PHP library path.
+* Configurable access keys.
+* Configurable environment (production, staging development etc)
+* PHP Exception handler.
+* PHP Error handler.
+* Watchdog error handler
+* Ignore PHP watchdog errors. (Don't send these to Rollbar)
+* Ability to turn off native PHP handlers and send all watchdog errors
+* JavaScript integration (send JS errors/exceptions to Rollbar.com)
+
+
 Installation
 ============
 
@@ -29,8 +45,10 @@ Installation
 
 
 Configuration
-============
+=============
 
 All configuration settings can be found under admin/config/development/rollbar
 once the module is enabled.
+
+
 

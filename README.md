@@ -9,10 +9,10 @@ Combined with client infomation. Like, browser, page plugins etc it can be
 very powerful at aiding development.
 
 This is not an official Rollbar module, this is currently also not on Drupal.org
-as there is some code in the module from the setup process at [https://rollbar.com/docs/items_js/]
+as there is some code in the module from the setup process at https://rollbar.com/docs/items_js/
 that I can't varify is licensed under the GPL.
 
-Sign up for an account at [https://rollbar.com/docs/items_js/]
+Sign up for an account at https://rollbar.com/docs/items_js/
 
 
 Installation
@@ -24,7 +24,7 @@ Installation
 
 3. Enable the module using Administer -> Modules (`admin/modules`)
 
-4. Download rollbar.php from [https://github.com/rollbar/rollbar-php] and place it
+4. Download rollbar.php from https://github.com/rollbar/rollbar-php and place it
    in `sites/all/libraries/rollbar/rollbar.php`
 
 

@@ -40,4 +40,9 @@ Configuration
 All configuration settings can be found under `admin/config/development/rollbar` once the module is enabled.
 
 
+License
+=======
+
+The code in this module for the most part is GPL'ed however I am unsure about the licensing of the JavaScript snippet which is included and the official Rollbar library that is required to make the PHP support run. If any of the folks at Rollbar can let me know about the licensing.
+
 

@@ -22,14 +22,14 @@ This module currently supports
 
 * Configurable PHP library path.
 * Configurable access keys.
-* Configurable environment (production, staging development etc)
+* Configurable environment (production, staging, development or custom).
 * PHP Exception handler.
 * PHP Error handler.
-* Drupal Watchdog error handler
-* Ignore Drupal watchdog PHP errors. (Don't send these to Rollbar)
-* Ability to turn off native PHP handlers and send all watchdog errors
-* JavaScript integration (send JS errors/exceptions to Rollbar.com)
-* PHP/JavaScript integration are seperate use them both or one or the other.
+* Drupal Watchdog error handler.
+* Ignore Drupal watchdog PHP errors. (Don't send these to Rollbar).
+* Ability to turn off native PHP handlers and send all watchdog errors.
+* JavaScript integration (send JS errors/exceptions to Rollbar.com).
+* PHP/JavaScript integration are seperate use them both or just one.
 
 Installation
 ============

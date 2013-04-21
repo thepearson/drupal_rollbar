@@ -2,12 +2,9 @@ About
 =====
 
 This module provides integration with [Rollbar](https://rollbar.com/). Rollbar provides a central
-point for managing code errors and warnings on your site. Users can easlily
-track when errors begin to occur and how often.
+point for managing errors and warnings in your code. Users can easlily track when errors begin to occur and how often.
 
-This is not an official Rollbar module, this is currently also not on Drupal.org
-as there is some code in the module from the setup process at https://rollbar.com/docs/items_js/
-that I can't varify is licensed under the GPL.
+This is not an official Rollbar module, this is currently also not on Drupal.org as there is some code in the module from the setup process at https://rollbar.com/docs/items_js/ that I can't varify is licensed under the GPL. 
 
 Sign up for an account at https://rollbar.com/
 

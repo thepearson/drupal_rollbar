@@ -151,7 +151,7 @@ function rollbar_admin_settings_form_validate($form, &$form_state) {
 
   // only validate if PHP is enabled, we don't really care otherwise
   if ($form_state['values']['rollbar_enable_php'] == 1) {
-    if (strlen(trim($form_state['values']['rollbar_server_access_token'])) == 0) {
+    if (!preg_match("/^[0-9a-z]{32}$/i", $form_state['values']['rollbar_server_access_token'])) {
       form_set_error(
         'rollbar_server_access_token',
         'You must specify a valid Rollbar token.'
@@ -167,11 +167,15 @@ function rollbar_admin_settings_form_validate($form, &$form_state) {
 
   // ensure key is provided for JS
   if ($form_state['values']['rollbar_enable_js'] == 1) {
-    if (strlen(trim($form_state['values']['rollbar_js_access_token'])) == 0) {
+
+    // make sure it's alphanumeric
+    if (!preg_match("/^[0-9a-z]{32}$/i", $form_state['values']['rollbar_js_access_token'])) {
       form_set_error(
         'rollbar_js_access_token',
         'You must specify a valid Rollbar token.'
       );
     }
+
+
   }
 }

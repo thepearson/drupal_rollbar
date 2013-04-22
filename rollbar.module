@@ -3,10 +3,6 @@
  * @file rollbar.module.
  */
 
-// include rollbar admin form functions
-include_once 'rollbar.admin.inc';
-
-
 /**
  * Helper function to get the path to the library,
  * since we include the Rollbar class at hook_boot, the modules
@@ -63,6 +59,34 @@ function rollbar_requirements($phase) {
         'severity' => REQUIREMENT_OK,
       );
     }
+
+    if (variable_get('rollbar_enable_php', 1) == 1 && trim(variable_get('rollbar_server_access_token', '')) == '') {
+      $requirements['rollbar_server_key'] = array(
+        'title' => t('Rollbar PHP token missing.'),
+        'description' => t(
+          'Rollbar for PHP is enabled however the access token is missing. Please configure your settings !link.',
+          array(
+            '!link' => l(t('here'), 'admin/config/development/rollbar')
+          )
+        ),
+        'value' => 'Missing token',
+        'severity' => REQUIREMENT_INFO,
+      );
+    }
+
+    if (variable_get('rollbar_enable_js', 1) == 1 && trim(variable_get('rollbar_js_access_token', '')) == '') {
+      $requirements['rollbar_client_key'] = array(
+        'title' => t('Rollbar JS token missing.'),
+        'description' => t(
+          'Rollbar for JavaScript is enabled however the access token is missing. Please configure your settings !link.',
+          array(
+            '!link' => l(t('here'), 'admin/config/development/rollbar')
+          )
+        ),
+        'value' => 'Missing token',
+        'severity' => REQUIREMENT_INFO,
+      );
+    }
   }
   return $requirements;
 }
@@ -74,15 +98,15 @@ function rollbar_requirements($phase) {
 function rollbar_boot() {
 
   // If php support is turned off then return
-  if (variable_get('rollbar_enable_php', 0) == 0) {
+  if (variable_get('rollbar_enable_php', 0) != 1) {
     return;
   }
 
   // load rollbar settings
-  $access_token = variable_get('rollbar_server_access_token', '');
-  $environment = variable_get('rollbar_environment', 'production');
-  $exceptions = variable_get('rollbar_exceptions', 1);
-  $errors = variable_get('rollbar_error_handling', 1);
+  $access_token = check_plain(variable_get('rollbar_server_access_token', ''));
+  $environment = check_plain(variable_get('rollbar_environment', 'production'));
+  $exceptions = check_plain(variable_get('rollbar_exceptions', 1));
+  $errors = check_plain(variable_get('rollbar_error_handling', 1));
 
   // get path to the library
   $rollbar_lib_path = _rollbar_get_library_path();
@@ -175,8 +199,8 @@ function rollbar_init() {
   }
 
   // client settings
-  $token = variable_get('rollbar_client_access_token', '');
-  $env = variable_get('rollbar_environment', 'production');
+  $token = check_plain(variable_get('rollbar_client_access_token', ''));
+  $env = check_plain(variable_get('rollbar_environment', 'production'));
 
   // I had some issues appending this via jQuery and using Drupal.behaviors,
   // so have opted to use javascript, in line with Rollbar.com

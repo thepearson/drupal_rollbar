@@ -113,12 +113,18 @@ function rollbar_boot() {
 
   // make sure that the file exists before inclusion
   if (!file_exists($rollbar_lib_path)) {
-    watchdog(
-      'rollbar',
-      'Unable to load Rollbar library. File @path does not exist. Check configuration settings.',
-      array('@path' => $rollbar_lib_path),
-      WATCHDOG_NOTICE
-    );
+
+    // if it don't, attempt to load it via DRUPAL_ROOT, this is for some cases
+    // when bootstrapped instances the include path isn't set correctly
+    $rollbar_lib_path = DRUPAL_ROOT . '/' . $rollbar_lib_path;
+    if (!file_exists($rollbar_lib_path)) {
+      watchdog(
+        'rollbar',
+        'Unable to load Rollbar library. File @path does not exist. Check configuration settings.',
+        array('@path' => $rollbar_lib_path),
+        WATCHDOG_NOTICE
+      );
+    }
     return;
   }
 

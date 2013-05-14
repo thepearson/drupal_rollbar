@@ -1,3 +1,9 @@
+Important
+=========
+
+May 15th, 2012 - Please use the drupal.org hosted module. located here: http://drupal.org/project/rollbar I will be bumping pushing changes up to github occasionally however issues and bugs should be reported on the drupal project page.
+
+
 About
 =====
 
